@@ -18,10 +18,5 @@ def miNombreEs(self, nombre):
     documentoDeTexto = f"Mi nombre es {nombre}"
     return HttpResponse(documentoDeTexto)
 
-def probandoTemplate(self):
-    miHtml = open("C:\Users\Eugenio\Desktop\Curso Python\Proyectos\ambiente_virtual_1\sistema_coder\plantillas\template1.html")
-    plantilla = Template(miHtml.read())
-    miHtml.close()
-    miContexto = Context()
-    documento = plantilla.render(miContexto)
-    return HttpResponse(documento)
+def listar_estudiantes(request):
+    return render(request=request, template_name="estudiantes/base.html")
