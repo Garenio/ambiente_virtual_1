@@ -19,4 +19,14 @@ def miNombreEs(self, nombre):
     return HttpResponse(documentoDeTexto)
 
 def listar_estudiantes(request):
-    return render(request=request, template_name="estudiantes/base.html")
+    contexto = {
+        "estudiantes": ["Eugenio", "Mauro", "Pedro", "Pepito"]
+    }
+    return render(
+        request=request,
+        template_name="estudiantes/lista_estudiantes.html",
+        context=contexto
+        )
+
+def listar_profesores(request):
+    return render(request=request, template_name="estudiantes/lista_profesores.html")

@@ -1,0 +1,14 @@
+{% extends "estudiantes/base.html" %}
+
+{% block contenido %}
+<section>
+  <div>
+    <h1>Lista de estudiantes de Coderhouse</h1>
+    <ul>
+    {% for students in estudiantes %}
+      <li>{{ students }}</li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock contenido %}
